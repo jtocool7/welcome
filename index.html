@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome Hannah!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #hero {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0B3954;
+    }
+
+    p {
+      font-family: "Rubik Mono One";
+      text-align: center;
+      line-height: 1.2; /* Adjust line height for spacing between lines */
+      font-size:4rem;
+      color:#FEFFFE;
+    }
+
+    span {
+      display: block;
+      color:#BFD7EA;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="hero">
+    <p>
+      Welcome <span>Hannah!</span>
+    </p>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script>
+const jsConfetti = new JSConfetti()
+jsConfetti.addConfetti()
+
+var x = 0;
+
+setInterval(() => {
+if (x <= 10) {
+jsConfetti.addConfetti()
+x++
+}
+}, 5000)
+</script>
+</html>
